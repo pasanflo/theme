@@ -25,23 +25,20 @@ const { page } = useData()
     :badge="item.badge"
     :noIcon="true"
   >
-    <span class="vt-link-text">{{ item.text }}</span>
+    {{ item.text }}
   </VTLink>
 </template>
 
 <style scoped>
 .VPNavBarMenuLink {
-  display: grid;
+  display: flex;
+  align-self: center;
   padding: 0 12px;
   font-size: 13px;
   font-weight: 500;
   color: var(--vt-c-text-1);
   transition: color 0.25s;
   white-space: nowrap;
-}
-
-.VPNavBarMenuLink .vt-link-text {
-  align-self: center;
 }
 
 .VPNavBarMenuLink.active {
